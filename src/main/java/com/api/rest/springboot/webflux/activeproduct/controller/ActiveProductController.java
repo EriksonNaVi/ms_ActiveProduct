@@ -34,7 +34,7 @@ public class ActiveProductController {
   }
   
   @PostMapping
-  public Mono<ActiveProduct> register(@Valid @RequestBody ActiveProduct active){
+  public Mono<ActiveProduct> createActive(@Valid @RequestBody ActiveProduct active){
       return activeService.save(active);
   }
   
@@ -53,7 +53,7 @@ public class ActiveProductController {
       c.setStatus(active.getStatus());
       c.setIdClient(active.getIdClient());
 
-      return activeService.update(c);
+      return activeService.save(c);
     }).map(c -> ResponseEntity.created(URI.create("/api/active/".concat(c.getId())))
         .contentType(MediaType.APPLICATION_JSON_UTF8).body(c)).defaultIfEmpty(ResponseEntity.notFound().build());
   }

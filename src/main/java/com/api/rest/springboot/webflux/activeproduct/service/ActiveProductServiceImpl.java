@@ -34,12 +34,6 @@ public class ActiveProductServiceImpl implements ActiveProductService {
   }
 
   @Override
-  public Mono<ActiveProduct> update(ActiveProduct active) {
-    
-    return activeRepository.save(active);
-  }
-  
-  @Override
   public Mono<Void> delete(ActiveProduct active) {
     
     return activeRepository.delete(active);

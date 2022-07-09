@@ -19,10 +19,10 @@ public class ActiveProduct {
   @Id
   private String id;
   
-  @NotNull(message = ValidationConstants.NOT_NULL)
+  @NotNull(message = ValidationConstants.NOT_EMPTY)
   private String creditCardNumber;
   
-  @NotNull(message = ValidationConstants.NOT_NULL)
+  @NotNull(message = ValidationConstants.NOT_EMPTY)
   private String status;
   
   @NotEmpty(message = ValidationConstants.NOT_EMPTY)
