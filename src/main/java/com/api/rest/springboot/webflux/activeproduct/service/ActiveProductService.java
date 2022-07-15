@@ -4,7 +4,6 @@ import com.api.rest.springboot.webflux.activeproduct.model.ActiveProduct;
 import com.api.rest.springboot.webflux.activeproduct.util.Crud;
 
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 public interface ActiveProductService extends Crud<ActiveProduct, String>{
 
