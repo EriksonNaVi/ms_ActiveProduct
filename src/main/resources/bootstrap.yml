@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: ms_ActiveProduct
-  cloud:
-    config:
-      uri: http://localhost:8081
-      username: maven
-      password: m4ven
